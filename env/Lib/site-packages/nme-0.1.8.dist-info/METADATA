@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: nme
+Version: 0.1.8
+Summary: Backward compatybility after change project name to `local_migrator
+Author: Grzegorz Bokota
+Author-email: g.bokota@uw.edu.pl
+License: MIT
+Project-URL: Homepage, https://github.com/Czaki/nme
+Project-URL: Repository, https://github.com/Czaki/nme
+Keywords: migration,persistance
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: local-migrator
+Provides-Extra: cbor
+Requires-Dist: local-migrator[cbor] ; extra == 'cbor'
+Provides-Extra: test
+Requires-Dist: local-migrator[test] ; extra == 'test'
+
+# nme
+
+This is `nme` release to provide simple migration to `local_migrator` project.   
