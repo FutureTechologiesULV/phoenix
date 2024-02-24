@@ -1,21 +1,17 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Oct 27 16:08:12 2023
 
-@author: slnew
-"""
-
-import time
 import numpy as np
 import pandas as pd
+from scipy import signal
 import matplotlib.pyplot as plt
-import matplotlib
-#matplotlib.use("TkAgg")
-matplotlib.use("Qt5Agg")
-from brainflow.board_shim import BoardShim, BrainFlowInputParams, LogLevels, BoardIds
-from brainflow.data_filter import DataFilter
-from matplotlib.animation import FuncAnimation
 
+# Read BCI data as a DataFrame
+data = pd.read_csv('OpenBCI-R-ARM-M-RAW-2023-12-13_14-49-07.txt', delimiter=',', skiprows=4)
+
+#print(data.columns)
+column_data = data[' Timestamp']
+f_row = data.iloc[1]
+print(data.at[1, ' Timestamp'])
 
 def main():
     

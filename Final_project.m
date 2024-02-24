@@ -4,9 +4,9 @@ clear
 
 %------------------ Read BCI data as a table  --------------------
 
-opts = detectImportOptions('OpenBCI-RIGHT-WRIST-MOVE-LEFT-RAW-2023-12-22_10-02-57.txt');
+opts = detectImportOptions('OpenBCI-R-ARM-M-RAW-2023-12-13_14-49-07.txt');
 opts = setvartype(opts, 'Timestamp_Formatted_', 'datetime');
-T = readtable('OpenBCI-R-ARM-M-RAW-2023-12-13_14-49-07', opts);
+T = readtable('OpenBCI-R-ARM-M-RAW-2023-12-13_14-49-07.txt', opts);
 
 
 % number of data rows
