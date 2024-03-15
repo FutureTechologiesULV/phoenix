@@ -8,7 +8,10 @@ data = pd.read_csv('OpenBCI-R-ARM-M-RAW-2023-12-13_14-49-07.txt', delimiter=',',
 # Extract the EEG data and timestamps
 eeg_channels = [' EXG Channel 0', ' EXG Channel 1', ' EXG Channel 2', 
                 ' EXG Channel 3', ' EXG Channel 4', ' EXG Channel 5', 
-                ' EXG Channel 6', ' EXG Channel 7']
+                ' EXG Channel 6', ' EXG Channel 7', ' EXG Channel 8',
+                ' EXG Channel 9', ' EXG Channel 10', ' EXG Channel 11',
+                ' EXG Channel 12', ' EXG Channel 13', ' EXG Channel 14',
+                ' EXG Channel 15']
 eeg_data = data[eeg_channels].values.T  # Transpose to have channels as rows
 timestamps = pd.to_datetime(data[' Timestamp (Formatted)'])
 t = (timestamps - timestamps[0]).dt.total_seconds().values
