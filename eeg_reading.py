@@ -30,20 +30,9 @@ sfreq = 250  # The sampling frequency of your EEG data
 info = mne.create_info(ch_names=eeg_channels, sfreq=sfreq, ch_types='eeg')
 
 # Step 4: Create the Raw object
-raw = mne.io.read_raw_nihon(eeg_data_volts, preload=False, verbose=None)
+raw = mne.io.RawArray(eeg_data_volts, info)
 raw.load_data()
 
-#Step 5: Start Preprocessing
-raw.set_channel_types({'EOG':'eog'})
-eog_events = mne.preprocessing.find_eog_events(raw)
-onsets = eog_events[:, 0] / raw.info["sfreq"] - 0.25
-durations = [0.5] * len(eog_events)
-descriptions = ["bad blink"] * len(eog_events)
-blink_annot = mne.annotations(onsets, durations, descriptions, orig_time=raw.info["meas_date"])
-raw.set_annotations(blink_annot)
-
-# Step 5: Plot the data
-raw.plot(duration=30, start=0, scalings='auto', block=True)
 
 
 import matplotlib.pyplot as plt

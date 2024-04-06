@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<EDFbrowser_ascii2edf_template>
+  <separator>,</separator>
+  <columns>33</columns>
+  <startline>6</startline>
+  <samplefrequency>125.0000000000</samplefrequency>
+  <autophysicalmaximum>1</autophysicalmaximum>
+  <edf_format>0</edf_format>
+  <signalparams>
+    <checked>1</checked>
+    <label>Sample Index</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 0</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 1</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 2</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 3</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 4</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 5</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 6</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 7</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 8</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 9</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 10</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 11</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 12</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 13</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 14</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>EXG Channel 15</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Accel Channel 0</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Accel Channel 1</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Accel Channel 2</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Other</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Other</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Other</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Other</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Other</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Other</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Other</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Analog Channel 0</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Analog Channel 1</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Analog Channel 2</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Timestamp</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Other</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+  <signalparams>
+    <checked>1</checked>
+    <label>Timestamp (Forma</label>
+    <physical_maximum>3000</physical_maximum>
+    <physical_dimension>uV</physical_dimension>
+    <multiplier>1.000000</multiplier>
+  </signalparams>
+</EDFbrowser_ascii2edf_template>
