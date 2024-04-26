@@ -1,11 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Apr  5 16:32:54 2024
-
-@author: ismai
-"""
-
 import mne
+import numpy as np
 import matplotlib.pyplot as plt
 
 # Define channel lists
@@ -15,6 +9,12 @@ eog_channels = ['EXG Channel 0', 'EXG Channel 1', 'EXG Channel 2',
                 'EXG Channel 9', 'EXG Channel 10', 'EXG Channel 11', 
                 'EXG Channel 12', 'EXG Channel 13', 'EXG Channel 14', 
                 'EXG Channel 15']
+channel_types = {'EXG Channel 0': 'eog', 'EXG Channel 1': 'eog', 'EXG Channel 2': 'eog', 
+                'EXG Channel 3': 'eog', 'EXG Channel 4': 'eog', 'EXG Channel 5': 'eog', 
+                'EXG Channel 6': 'eog', 'EXG Channel 7': 'eog', 'EXG Channel 8': 'eog', 
+                'EXG Channel 9': 'eog', 'EXG Channel 10': 'eog', 'EXG Channel 11': 'eog', 
+                'EXG Channel 12': 'eog', 'EXG Channel 13': 'eog', 'EXG Channel 14': 'eog', 
+                'EXG Channel 15': 'eog'}
 excluded_channels = ['Sample Index','Accel Channel 0', 'Accel Channel 1', 'Accel Channel 2', 
                      'Other', 'Other', 'Other', 'Other', 'Other', 'Other', 
                      'Other', 'Analog Channel 0', 'Analog Channel 1', 'Analog Channel 2', 'Timestamp', 'Other', 'Timestamp (Forma']
@@ -34,12 +34,36 @@ info = mne.create_info(ch_names=eog_channels, sfreq=sfreq, ch_types='eog')
 
 # Step 4: Create the Raw object
 raw = mne.io.RawArray(eog_data_volts, info)
+raw.set_channel_types(channel_types)
 
-# Plot the EEG data
-plt.figure(figsize=(15, 7))
-for i in range(len(eog_channels)):
-    plt.subplot(len(eog_channels), 1, i+1)
-    plt.plot(eog_data_volts[i, :1000])  # Plotting only the first 1000 samples
-    plt.title(f'Channel {eog_channels[i]}')
-    plt.tight_layout()
-plt.show()
+
+# Step 5: Filtering the data
+
+def add_arrows(axes):
+    """Add some arrows at 60 Hz and its harmonics."""
+    for ax in axes:
+        freqs = ax.lines[-1].get_xdata()
+        psds = ax.lines[-1].get_ydata()
+        for freq in (60, 120, 180, 240):
+            idx = np.searchsorted(freqs, freq)
+            # get ymax of a small region around the freq. of interest
+            y = psds[(idx - 4) : (idx + 5)].max()
+            ax.arrow(
+                x=freqs[idx],
+                y=y + 18,
+                dx=0,
+                dy=-12,
+                color="red",
+                width=0.1,
+                head_width=3,
+                length_includes_head=True,
+            )
+
+# Get the indices of the EOG channels
+picks = mne.pick_channels(raw.info['ch_names'], include=eog_channels)
+
+fig = raw.compute_psd(fmax=62.5).plot(
+    average=True, amplitude=False, picks=picks
+)
+
+add_arrows(fig.axes[:2])
