@@ -88,7 +88,7 @@ for n=0:7
     
     s_to_n = 10*log10(signal_power/noise_power);
     %Uncoment the following line to print the SNR in the command window
-    % fprintf('SNR %g : %.2f dB\n',n, s_to_n);
+    fprintf('SNR %g : %.2f dB\n',n, s_to_n);
     subplot(8,1,n+1)
     plot(t, CH_D(:,n+1),'DisplayName',sprintf('SNR %g : %.2f dB\n',n, s_to_n))
     xlabel('time (s)')
@@ -209,3 +209,22 @@ legend
 % %--------DATA CONVERSION TO 1 AND 0-------
 
 
+
+%%----S/N Ratio-----
+figure
+for n=0:7
+    signal = CH_MA;
+    noise = CH-CH_MA;
+    signal_power = sum(abs(signal).^2)/length(signal);
+    noise_power = sum(abs(noise).^2)/length(noise);
+    
+    s_to_n = 10*log10(signal_power/noise_power);
+    %Uncoment the following line to print the SNR in the command window
+    fprintf('SNR %g : %.2f dB\n',n, s_to_n);
+    subplot(8,1,n+1)
+    plot(t, CH_D(:,n+1),'DisplayName',sprintf('SNR %g : %.2f dB\n',n, s_to_n))
+    xlabel('time (s)')
+    ylabel('microvolts')
+    legend
+    
+end
