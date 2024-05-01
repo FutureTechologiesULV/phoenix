@@ -1,3 +1,4 @@
+
 import mne
 import numpy as np
 import matplotlib.pyplot as plt
@@ -30,7 +31,7 @@ eog_data_volts = data.get_data() / 1e6  # Convert from μV to V
 
 # Step 3: Create MNE Info object
 sfreq = data.info['sfreq']  # Sampling frequency
-info = mne.create_info(ch_names=eog_channels, sfreq=sfreq, ch_types='eog')
+info = mne.create_info(ch_names = eog_channels, sfreq=sfreq, ch_types='eog')
 
 # Step 4: Create the Raw object
 raw = mne.io.RawArray(eog_data_volts, info)
@@ -60,7 +61,7 @@ def add_arrows(axes):
             )
 
 # Get the indices of the EOG channels
-picks = mne.pick_channels(raw.info['ch_names'], include=eog_channels)
+picks = mne.pick_channels(raw, eog_channels, excluded_channels, True)
 
 fig = raw.compute_psd(fmax=62.5).plot(
     average=True, amplitude=False, picks=picks
